@@ -1,0 +1,23 @@
+package com.example.curso.boot.service;
+
+import com.example.curso.boot.domain.Departamento;
+import java.util.List;
+
+/**
+ *
+ * @author jennifer
+ */
+public interface DepartamentoService {
+
+    void salvar(Departamento departamento);
+
+    void editar(Departamento departamento);
+
+    void excluir(Long id);
+
+    Departamento buscarPorId(Long id);
+
+    List<Departamento> buscarTodos();
+
+    boolean depertamentoTemCargos(Long id);
+}
