@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface CargoDao {
 
-    void save(Cargo cargo);
+    void save(Cargo cargo );
 
     void update(Cargo cargo);
 
@@ -18,5 +18,4 @@ public interface CargoDao {
     Cargo findById(Long id);
 
     List<Cargo> findAll();
-
 }

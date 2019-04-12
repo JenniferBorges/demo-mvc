@@ -18,9 +18,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 @RequestMapping("/departamentos")
 public class DepartamentoController {
-    
-   	
-		
+	
 	@Autowired
 	private DepartamentoService service;
 
@@ -58,7 +56,7 @@ public class DepartamentoController {
 	@GetMapping("/excluir/{id}")
 	public String excluir(@PathVariable("id") Long id, ModelMap model) {
 		
-		if (service.depertamentoTemCargos(id)) {
+		if (service.departamentoTemCargos(id)) {
 			model.addAttribute("fail", "Departamento não removido. Possui cargo(s) vinculado(s).");
 		} else {
 			service.excluir(id);
@@ -67,4 +65,6 @@ public class DepartamentoController {
 		
 		return listar(model);
 	}
+	
+	
 }
